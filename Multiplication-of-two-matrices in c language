@@ -1,0 +1,89 @@
+// Code for multiplication of two matrices
+
+#include <stdio.h>
+int main()
+{
+    int mat1[3][3];
+    int mat2[3][3];
+    int pro[3][3];    //product matrix
+    
+    printf("Enter the elements of the matrix 1:\n");
+
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+            scanf("%d",&mat1[i][j]);
+        }
+    }
+     
+    printf("Your first matrix is:\n");
+
+    for (int i=0;i<3;i++)
+    {
+        for(int j =0;j<3;j++)
+       {
+       printf("%d ",mat1[i][j]);
+           
+       }
+       printf("\n");
+
+    }
+
+    printf("\n");
+     
+    printf("Enter the elements of the matrix 2:\n");
+
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+            scanf("%d",&mat2[i][j]);
+        }
+    }
+
+    printf("Your second matrix is:\n");
+
+    for (int i=0;i<3;i++)
+    {
+         for(int j =0;j<3;j++)
+       {
+       printf("%d ",mat2[i][j]);
+           
+       }
+       printf("\n");
+    }
+
+    printf("\n");
+
+   //logic for multiplication of two matrices
+
+    for (int i=0;i<3;i++)
+    {
+        for(int j =0;j<3;j++)
+        {
+            pro[i][j]=0;    //initialize the place in product matrix as zero and then add the value that will be calculated
+
+            for(int k=0;k<3;k++)
+            {
+                pro[i][j] = (pro[i][j]) + (mat1[i][k]*mat2[k][j]);
+            }
+        }
+    }
+
+    printf("Multiplication of given matrices is:\n");
+
+    for (int i=0;i<3;i++)
+    {
+        for(int j =0;j<3;j++)
+        {
+            printf(" %d  ",pro[i][j]);
+        }
+        printf("\n");
+    }
+
+
+    printf("\n");
+    return 0;
+
+}
